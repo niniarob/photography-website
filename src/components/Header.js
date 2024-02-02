@@ -1,23 +1,33 @@
-import React from "react";
+import React, {useContext} from "react";
 // import component;
 import Socials from "./Socials";
-import Logo from "../img/header/logo.svg";
+// import Logo from "../img/header/logo.svg";
 import MobileNav from "./MobileNav";
 
 // import link;
 import { Link } from "react-router-dom";
+import {CursorContext} from '../context/CursorContext';
+
 
 const Header = () => {
+  const {mouseEnterHandler,mouseLeaveHandler} = useContext(CursorContext);
+
   return (
     <header className="fixed w-full px-[30px] lg:px-[100px] z-30 lg:h-[140px] flex items-center">
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
         {/* Logo */}
-        <Link to={"/"} >
+        <Link
+           onMouseEnter={mouseEnterHandler}
+           onMouseLeave={mouseLeaveHandler}
+        to={"/"} >
           {/* <img src={Logo} alt="" /> */}
           <h1 className="text-primary font-primary font-bold text-5xl">Nino & Rob</h1>
         </Link>
         {/* nav initially hidden show on desktop */}
-        <nav className="hidden xl:flex gap-x-12 font-semibold">
+        <nav
+                          onMouseEnter={mouseEnterHandler}
+                          onMouseLeave={mouseLeaveHandler}
+        className="hidden xl:flex gap-x-12 font-semibold">
           <Link
             to={"/"}
             className="text-[#696c6d] hover:text-primary transition"

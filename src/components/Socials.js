@@ -1,9 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 // import socials
-import {ImFacebook, ImTwitter, ImPinterest, ImInstagram,ImYoutube, ImLinkedin} from 'react-icons/im';
+import {ImFacebook,  ImInstagram,ImLinkedin} from 'react-icons/im';
+import {CursorContext} from '../context/CursorContext';
+
 
 const Socials = () => {
-  return <div className='hidden  xl:flex ml-24'>
+  const {mouseEnterHandler,mouseLeaveHandler} = useContext(CursorContext);
+
+  return (
+  <div
+  onMouseEnter={mouseEnterHandler}
+  onMouseLeave={mouseLeaveHandler}
+   className='hidden  xl:flex ml-24'>
     <ul className='flex gap-x-4'>
       <li>
         <a href='http://www.facebook.com' target='-blank'>
@@ -15,23 +23,14 @@ const Socials = () => {
           <ImLinkedin/>
         </a>
       </li>
-      {/* <li>
-        <a href='http://www.youtube.com' target='-blank'>
-          <ImYoutube/>
-        </a>
-      </li> */}
-      {/* <li>
-        <a href='http://www.pinterest.com' target='-blank'>
-          <ImPinterest/>
-        </a>
-      </li> */}
       <li>
         <a href='http://www.instagram.com' target='-blank'>
           <ImInstagram/>
         </a>
       </li>
     </ul>
-  </div>;
+  </div>
+  );
 };
 
 export default Socials;
