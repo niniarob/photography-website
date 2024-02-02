@@ -9,11 +9,12 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="fixed w-full px-[30px] lg:px-[100px] z-[100px] lg:h-[140px] flex items-center">
+    <header className="fixed w-full px-[30px] lg:px-[100px] z-30 lg:h-[140px] flex items-center">
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
         {/* Logo */}
-        <Link to={"/"} className="max-w-[200px]">
-          <img src={Logo} alt="" />
+        <Link to={"/"} >
+          {/* <img src={Logo} alt="" /> */}
+          <h1 className="text-primary font-primary font-bold text-5xl">Nino & Rob</h1>
         </Link>
         {/* nav initially hidden show on desktop */}
         <nav className="hidden xl:flex gap-x-12 font-semibold">

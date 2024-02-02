@@ -1,9 +1,9 @@
 import React from 'react';
 // import socials
-import {ImFacebook, ImTwitter, ImPinterest, ImInstagram,ImYoutube} from 'react-icons/im';
+import {ImFacebook, ImTwitter, ImPinterest, ImInstagram,ImYoutube, ImLinkedin} from 'react-icons/im';
 
 const Socials = () => {
-  return <div className='hidden xl:flex ml-24'>
+  return <div className='hidden  xl:flex ml-24'>
     <ul className='flex gap-x-4'>
       <li>
         <a href='http://www.facebook.com' target='-blank'>
@@ -11,20 +11,20 @@ const Socials = () => {
         </a>
       </li>
       <li>
-        <a href='http://www.twitter.com' target='-blank'>
-          <ImTwitter/>
+        <a href='http://www.linkedin.com' target='-blank'>
+          <ImLinkedin/>
         </a>
       </li>
-      <li>
+      {/* <li>
         <a href='http://www.youtube.com' target='-blank'>
           <ImYoutube/>
         </a>
-      </li>
-      <li>
+      </li> */}
+      {/* <li>
         <a href='http://www.pinterest.com' target='-blank'>
           <ImPinterest/>
         </a>
-      </li>
+      </li> */}
       <li>
         <a href='http://www.instagram.com' target='-blank'>
           <ImInstagram/>
